@@ -1,5 +1,3 @@
-/// @description Init Variables
-
 randomize();
 
 currentNum = 0;
