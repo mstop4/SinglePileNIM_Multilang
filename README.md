@@ -2,6 +2,14 @@
 
 Single Pile NIM game written in multiple languages. It's like "Hello, World!", but more complicated.
 
+**Current list of languages:**
+
+* [C++](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/c_plus_plus)
+* [C#](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/c_sharp)
+* [GML](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/gml)
+* [Java](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/java)
+* [Python](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/python)
+
 **Rules**
 
 The game starts with ***N*** objects. The human player and computer player each take turns taking 1 to ***M*** objects from ***N***. Whoever takes the last object loses. The human player always goes first.
