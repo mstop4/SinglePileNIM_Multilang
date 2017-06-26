@@ -1,0 +1,44 @@
+body {
+    background-color: #002040;
+    color: #C0E0FF;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+	font-size: 48pt;
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	text-shadow: 0 0 50px #80C0FF;
+}
+
+p {
+	font-size: 18pt;
+}
+
+input {
+	font-size: 18pt;
+	font-family: 'Quicksand', sans-serif;
+	width: 64px;
+}
+
+button {
+	font-size: 18pt;
+	font-family: 'Quicksand', sans-serif;
+}
+
+#remain {
+	font-weight: bolder;
+	font-size: 36pt;
+	text-shadow: 0 0 25px #00C000;
+	color: #80FF80;
+}
+
+#range {
+	font-weight: bolder;
+	color: #FFFF80;
+}
+
+#comValue {
+	font-weight: bolder;
+	color: #FF8080;
+}

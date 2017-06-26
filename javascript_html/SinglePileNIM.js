@@ -5,7 +5,9 @@ var gameIsOver;
 
 var playerInput;
 var playerText;
-var comText;
+var rangeText;
+var comText = [];
+var comValueText;
 var messageText;
 var remainText;
 var playerSubmit;
@@ -20,7 +22,10 @@ function loadInit() {
 
 	playerInput = document.getElementById("playerInput");
 	playerText = document.getElementById("playerQuestion");
-	comText = document.getElementById("comTake");
+	rangeText = document.getElementById("range");
+	comText[0] = document.getElementById("comTake1");
+	comText[1] = document.getElementById("comTake2");
+	comValueText = document.getElementById("comValue");
 	messageText = document.getElementById("message");
 	remainText = document.getElementById("remain");
 	playerSubmit = document.getElementById("playerSubmit");
@@ -45,10 +50,15 @@ function setupPlayersTurn() {
 	{
 		whoseTurn = 1;
 
-		playerText.innerHTML = "How much will you take (1-" + maxTake + ")?";
+		playerText.innerHTML = "How much will you take? "
+		rangeText.innerHTML = "(1-" + maxTake + ")";
 
 		if (takeAmount !== 0)
-			comText.innerHTML = "(I took " + takeAmount + " last turn.)";
+		{
+			comText[0].innerHTML = "(I took ";
+			comValueText.innerHTML = takeAmount;
+			comText[1].innerHTML = " last turn.)";
+		}
 
 		playerInput.disabled = false;
 		playerSubmit.disabled = false;
@@ -65,10 +75,10 @@ function setupComputersTurn() {
 
 		takeAmount = Math.max(1,((currentNum % (maxTake+1)) + maxTake) % (maxTake+1));
 
-		comText.innerHTML = "I will take: " + takeAmount;
-		currentNum -= takeAmount;
-		remainText.innerHTML = currentNum;
-		setTimeout(setupPlayersTurn,1500);
+		comText[0].innerHTML = "I will take: ";
+		comValueText.innerHTML = takeAmount;
+		comText[1].innerHTML = "";
+		setTimeout(decrementNumber(currentNum - takeAmount),250);
 	}
 }
 
@@ -81,13 +91,12 @@ function clickOK() {
 		if (!isNaN(number) && number <= maxTake && number >= 0 && number <= currentNum)
 		{
 			messageText.innerHTML =  "";
-			currentNum -= number;
-			remainText.innerHTML = currentNum;
 			playerText.innerHTML = "You took:";
+			rangeText.innerHTML = "";
 			comText.innerHTML = "";
 			playerInput.disabled = true;
 			playerSubmit.disabled = true;
-			setTimeout(setupComputersTurn,1500);
+			setTimeout(decrementNumber(currentNum - number),250);
 		}
 
 		else
@@ -97,6 +106,24 @@ function clickOK() {
 	else
 	{
 		loadInit();
+	}
+}
+
+function decrementNumber(targetNum) {
+
+	if (currentNum > targetNum)
+	{
+		currentNum--;
+		remainText.innerHTML = currentNum;
+		setTimeout(function() {decrementNumber(targetNum)},100);
+	}
+
+	else
+	{
+		if (whoseTurn == 1)
+			setTimeout(setupComputersTurn,1000);
+		else
+			setTimeout(setupPlayersTurn,1000);
 	}
 }
 

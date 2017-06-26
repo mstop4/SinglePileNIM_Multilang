@@ -3,7 +3,11 @@
 
 <head>
 	<title> Single Pile NIM </title>
+
 	<script src="SinglePileNIM.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Indie+Flower" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="SinglePileNIM.css">
 </head>
 
 <body onload="loadInit()">
@@ -18,13 +22,18 @@
 
 	<section>
 		<p><span id="playerQuestion">You take:</span>
+		<span id="range">1</span>
 		<input id="playerInput">
 		<button type="button" id="playerSubmit" onClick="clickOK()">OK</button>
 		</p>
 	</section>
 
 	<section>
-		<p><span id="comTake"></span></p>
+		<p>
+		<span id="comTake1"></span>
+		<span id="comValue"></span>
+		<span id="comTake2"></span>
+		</p>
 	</section>
 
 	<section>
