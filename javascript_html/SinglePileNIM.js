@@ -36,7 +36,9 @@ function loadInit() {
 	takeAmount = 0;
 	
 	remainText.innerHTML = currentNum;
-	comText.innerHTML = "";
+	comText[0].innerHTML = "";
+	comValueText.innerHTML = "";
+	comText[1].innerHTML = "";
 	messageText.innerHTML = "";
 
 	setupPlayersTurn();
