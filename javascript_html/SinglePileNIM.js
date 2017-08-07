@@ -1,3 +1,9 @@
+//
+// Single Pile NIM - Javascript Edition
+// By: M.S.T.O.P.
+// June 2017
+//
+
 var currentNum;
 var maxTake;
 var whoseTurn;
@@ -34,7 +40,7 @@ function loadInit() {
 	currentNum = maxTake * randomRange(3,6) + randomRange(1,maxTake);
 	gameIsOver = false;
 	takeAmount = 0;
-	
+
 	remainText.innerHTML = currentNum;
 	comText[0].innerHTML = "";
 	comValueText.innerHTML = "";

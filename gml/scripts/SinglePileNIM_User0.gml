@@ -4,4 +4,4 @@ gameIsOver = false;
 whoseTurn = 1;
 awaitingInput = true;
 drawComTake = false;
-drawPlayerTake = false; 
+drawPlayerTake = false;
