@@ -10,6 +10,7 @@ Single Pile NIM game written in multiple languages. It's like "Hello, World!", b
 * [Java](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/java)
 * [Javascript + HTML5](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/javascript_html)
 * [Python](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/python)
+* [Ruby](https://github.com/mstop4/SinglePileNIM_Multilang/tree/master/ruby)
 
 **Rules**
 
